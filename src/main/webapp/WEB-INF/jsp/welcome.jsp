@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        阳光成单系统
+        CCEG数字营销系统
     </title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -25,7 +25,7 @@
 </style>
 <div class="x-body">
     <blockquote class="layui-elem-quote">
-        欢迎使用阳光成单系统！<span class="f-14">v1.0</span> &nbsp;&nbsp;登录次数：18
+        欢迎使用CCEG数字营销系统！<span class="f-14">v1.0</span> &nbsp;&nbsp;登录次数：18
     </blockquote>
     <div class="row">
         <div class="col-xs-6 col-sm-4 col-md-3">

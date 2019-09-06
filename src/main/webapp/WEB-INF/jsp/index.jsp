@@ -153,7 +153,7 @@
         </ul>
         <div class="layui-tab-content site-demo site-demo-body">
             <div class="layui-tab-item layui-show">
-                <iframe frameborder="0" src="./welcome.jsp" class="x-iframe"></iframe>
+                <iframe frameborder="0" src="/welcome" class="x-iframe"></iframe>
             </div>
         </div>
     </div>

@@ -89,7 +89,7 @@ background:none;}
 .menu a.this::after{content: ''; position: absolute; left: 0; bottom: -1px; width: 100%; height: 5px; background-color: #2299ee;}
 
 .header-index{background-color: #080018; border: none;}
-.logo{left: 40px;font-size: 28px;color: #fff;line-height: 60px;margin-left:10px;}
+.logo{left: 40px;font-size: 18px;color: #fff;line-height: 60px;margin-left:10px;}
 .admin-logo-box{width:185px;height:57px;position:relative}
 .larry-side-menu{position:absolute;cursor:pointer;z-index:19940201;left:200px;color:#fff;text-align:center;width:30px;height:30px;background-color:#29e;line-height:30px;top:23%}
 .larry-side-menu:hover{background-color:#0c7fd1}

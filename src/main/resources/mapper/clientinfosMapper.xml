@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yeyun.yeyunpush.mapper.clientinfosMapper">
+  <resultMap id="BaseResultMap" type="com.yeyun.yeyunpush.entity.clientinfos">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="clientid" jdbcType="VARCHAR" property="clientid" />
+    <result column="connected" jdbcType="SMALLINT" property="connected" />
+    <result column="mostsignbits" jdbcType="BIGINT" property="mostsignbits" />
+    <result column="leastsignbits" jdbcType="BIGINT" property="leastsignbits" />
+    <result column="lastconnecteddate" jdbcType="TIMESTAMP" property="lastconnecteddate" />
+  </resultMap>
+</mapper>

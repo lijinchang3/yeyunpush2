@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- 引入配置文件 -->
+    <properties resource="application.properties" />
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`" />
+        <property name="endingDelimiter" value="`" />
+        <!-- 生成的文件编码 -->
+        <property name="javaFileEncoding" value="utf-8"/>
+
+        <!-- 集成通用Mapper -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.yeyun.yeyunpush.common.dao.MyMapper" />
+        </plugin>
+        <!-- 生成注释 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="false"/>
+        </commentGenerator>
+        <!-- 数据库连接属性 -->
+        <jdbcConnection driverClass="${spring.datasource.driverClassName}" connectionURL="${spring.datasource.url}" userId="${spring.datasource.username}" password="${spring.datasource.password}" />
+        <!-- 生成实体类配置 -->
+        <javaModelGenerator targetPackage="com.yeyun.yeyunpush.entity" targetProject="src/main/java" >
+        </javaModelGenerator>
+        <!-- 生成映射文件配置 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources" />
+        <!-- 生成映射接口配置 -->
+        <javaClientGenerator targetPackage="com.yeyun.yeyunpush.mapper" targetProject="src/main/java" type="XMLMAPPER" />
+        		<table tableName="t_clientinfo" domainObjectName="clientinfos">
+        			<property name="useActualColumnNames" value="false"/>
+        			<!--mysql 配置 -->
+        			<generatedKey column="clientid" sqlStatement="Mysql" identity="false" />
+        		</table>
+    </context>
+</generatorConfiguration>

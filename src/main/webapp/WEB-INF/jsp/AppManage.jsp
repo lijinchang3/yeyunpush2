@@ -53,6 +53,7 @@
         </div>
     </div>
 </div>
+<script src="./js/jquery.min.js"></script>
 <script src="./static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="./static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
 

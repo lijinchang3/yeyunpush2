@@ -19,10 +19,8 @@ public class clientinfosService extends AbstratService<clientinfos> {
         example.createCriteria().andEqualTo("clientid", clientinfos.getClientid());
         int result=mapper.updateByExampleSelective(clientinfos, example);
     }
-
     public  List<clientinfos> findClientInfos(clientinfos clientinfos)
     {
-
         Example e = new Example(clientinfos.class);
         Example.Criteria c = e.createCriteria();
         if(!StringUtils.isBlank(clientinfos.getClientid()))

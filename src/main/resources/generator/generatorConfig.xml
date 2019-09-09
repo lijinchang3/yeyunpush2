@@ -27,10 +27,10 @@
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources" />
         <!-- 生成映射接口配置 -->
         <javaClientGenerator targetPackage="com.yeyun.yeyunpush.mapper" targetProject="src/main/java" type="XMLMAPPER" />
-        		<table tableName="t_clientinfo" domainObjectName="clientinfos">
+        		<table tableName="appmanage" domainObjectName="AppManage">
         			<property name="useActualColumnNames" value="false"/>
         			<!--mysql 配置 -->
-        			<generatedKey column="clientid" sqlStatement="Mysql" identity="false" />
+        			<generatedKey column="id" sqlStatement="Mysql" identity="false" />
         		</table>
     </context>
 </generatorConfiguration>

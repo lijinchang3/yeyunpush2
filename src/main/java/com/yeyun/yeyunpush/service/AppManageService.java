@@ -27,7 +27,6 @@ public class AppManageService extends AbstratService<AppManage> {
     {
         Example example = new Example(AppManage.class);
         example.createCriteria().andEqualTo("id", appManage.getId());
-
         int result=mapper.updateByExampleSelective(appManage, example);
         return  result;
     }

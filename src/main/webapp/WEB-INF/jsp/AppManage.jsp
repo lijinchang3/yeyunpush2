@@ -17,23 +17,30 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>网站后台管理模版</title>
     <link rel="stylesheet" href="./plugins/layui/css/layui.css" media="all">
+
+    <style>
+        .x-item {
+            margin-bottom: 0px;
+            padding-left: 5px;
+        }
+    </style>
 </head>
 <body>
 <div class="wrap-container clearfix">
     <div class="column-content-detail">
 
-        <form class="layui-form x-center" action="" style="width:800px">
+<%--        <form class="layui-form " action="" style="width:800px">--%>
             <div class="layui-form-pane" style="margin-top: 15px;">
-                <div class="layui-form-item">
+                <div class="layui-form-item  x-item">
                     <div class="layui-input-inline">
-                        <input type="text" name="title" required lay-verify="required" placeholder="请输入应用名称" autocomplete="off" class="layui-input">
+                        <input type="text" name="appname" required lay-verify="required" placeholder="请输入应用名称" autocomplete="off" class="layui-input">
                     </div>
                     <div class="layui-input-inline" style="width:80px">
-                        <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon"></i></button>
+                        <button class="layui-btn" lay-filter="sreach" id="search"><i class="layui-icon"></i></button>
                     </div>
                 </div>
             </div>
-        </form>
+<%--        </form>--%>
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
                 <button class="layui-btn layui-btn-normal" type="button" lay-event="add">新增</button>
@@ -85,6 +92,14 @@
                         , area: ['500px', '320px']
                         , btn: ['提交', '取消'] //只是为了演示
                         , yes: function () {
+                            if($("input[name=AppName]").val()==undefined||$("input[name=AppName]").val()==null||$("input[name=AppName]").val()=="")
+                            {
+                                layer.alert("请输入应用名",{
+                                    icon:2,
+                                    title:'错误'
+                                });
+                                return false;
+                            }
                             $.ajax({
                                 type: "post"
                                 , url: "/AppManage/add"
@@ -114,7 +129,7 @@
                     });
                     break;
                 case 'search':
-                    table.reload('test', {
+                    table.reload('idsw', {
                         where: $("#searchForm").serializeObject()//用jquery.jdirk.js实现的，将form表单中的input值转成json格式
                         ,page: {
                             curr: 1 //重新从第 1 页开始
@@ -136,13 +151,13 @@
                         ids.push(obj.id)
                     })
                     layer.confirm('确定删除这些数据?', function(index) {
-                        $.post("/employee/batchDel", {"ids": ids.toString()}, function (result) {
-                            if (result.succe) {
+                        $.post("/AppManage/batchDel", {"ids": ids.toString()}, function (result) {
+                            if (result.code=="3") {
                                 //刷新页面
-                                table.reload('test',{page:{curr:1}});
+                                table.reload('idsw',{page:{curr:1}});
                                 layer.close(index);
                             } else {
-                                layer.alert(result.backMessage, {
+                                layer.alert(result.msg, {
                                     icon: 2,
                                     title: '错误'
                                 });
@@ -168,6 +183,14 @@
             , area: ['500px', '320px']
             , btn: ['修改', '取消'] //只是为了演示
             , yes: function () {
+                if($("input[name=AppName]").val()==undefined||$("input[name=AppName]").val()==null||$("input[name=AppName]").val()=="")
+                {
+                    layer.alert("请输入应用名",{
+                        icon:2,
+                        title:'错误'
+                    });
+                    return false;
+                }
                 $.ajax({
                     type: "post"
                     , url: "/AppManage/update"
@@ -196,13 +219,20 @@
             }
         });
     }
-    $("#routeNamesele").click(function () {
-        xrsj("ByName/"+$("#routeName").val());
-    })
-    $("#routeNosele").click(function () {
-        xrsj("ById/"+$("#routeNo").val());
-    })
 
+    var $ = layui.$, active = {
+        reload: function(){
+            var appname = $("input[name=appname]").val();
+            table.reload('idsw', {
+                where: {
+                    appname:  $("input[name=appname]").val()
+                }
+            });
+        }
+    };
+    $('#search').on('click', function(){
+        active["reload"] ? active["reload"].call(this) : '';
+    });
     function xrsj(url) {
         //进行渲染
         table.render({
@@ -210,8 +240,10 @@
             ,toolbar: '#toolbarDemo'
             , page: true
             , url: '/AppManage/'+url //数据接口
+            //,method:'POST'
             , cellMinWidth: 182
             , cols: [[ //表头
+                {type:'checkbox'},
                 {type:'numbers',title: '序号'}
                 , {field: 'appname', title: '应用名', align: 'center'}
                 , {field: 'addtime', title: '添加时间', align: 'center'}
@@ -252,10 +284,9 @@
             <label class="layui-form-label">应用名称：</label>
             <div class="layui-input-block" >
                 <input type="hidden" name="Id" value="">
-                <input type="text" name="AppName" value="${param.routeName}" maxlength="11" required lay-verify="required" placeholder="请输入路线" autocomplete="off"  style="width:80%;" class="layui-input">
+                <input type="text" name="AppName" value="${param.routeName}" maxlength="11" required lay-verify="required" placeholder="请输应用名" autocomplete="off"  style="width:80%;" class="layui-input">
             </div>
         </div>
-
     </form>
 </form>
 </body>

@@ -196,7 +196,7 @@ public abstract class AbstratService<T> {
     /**
      * 通用批量删除
      * @param str
-     * @param list
+     * @param ids
      * @return
      */
     public AjaxResult batchDelete(String str, int[] ids) {

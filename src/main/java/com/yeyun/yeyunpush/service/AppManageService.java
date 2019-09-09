@@ -17,20 +17,22 @@ public class AppManageService extends AbstratService<AppManage> {
         return mapper.selectAll();
     }
     //增加
-    public int insertClient(AppManage appManage)
+    public int InsertAppManage(AppManage appManage)
     {
         int result=mapper.insertSelective(appManage);
         return  result;
     }
     //修改
-    public void updateClient(AppManage clientinfos)
+    public int UpdateAppManage(AppManage appManage)
     {
-        Example example = new Example(clientinfos.class);
-        example.createCriteria().andEqualTo("id", clientinfos.getId());
-        int result=mapper.updateByExampleSelective(clientinfos, example);
+        Example example = new Example(AppManage.class);
+        example.createCriteria().andEqualTo("id", appManage.getId());
+
+        int result=mapper.updateByExampleSelective(appManage, example);
+        return  result;
     }
     //删除
-    public int deleteClient(AppManage appManage)
+    public int delAppManage(AppManage appManage)
     {
         int result=mapper.deleteByPrimaryKey(appManage);
         return  result;

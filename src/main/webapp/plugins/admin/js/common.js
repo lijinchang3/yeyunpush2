@@ -1,5 +1,5 @@
 layui.config({
-	base: '../plugin/admin/js/module/'
+	base: '../plugins/admin/js/module/'
 }).extend({
 	dialog: 'dialog',
 });
@@ -47,7 +47,9 @@ layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog',   'element
 		return false;
 
 	}).mouseenter(function() {
+
 		dialog.tips('批量排序', '.listOrderBtn');
+
 	})	
 	//顶部批量删除
 	$('.delBtn').click(function() {
@@ -160,5 +162,6 @@ function refresh() {
 	} else {
 		window.location.reload();
 	}
+
 	layer.closeAll();
 }

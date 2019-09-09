@@ -38,11 +38,11 @@
             </ul>
 
             <ul class="layui-nav" lay-filter="">
-                <!-- <li class="layui-nav-item">
+                <li class="layui-nav-item">
                                   <a href="" title="消息">
                                       <i class="layui-icon" style="top: 1px;">&#xe63a;</i>
                                   </a>
-                                  </li> -->
+                                  </li>
                 <li class="layui-nav-item"><img src="./images/logo.png" class="layui-circle" style="border: 2px solid #A9B7B7;" width="35px" alt=""></li>
                 <li class="layui-nav-item"> <a href="javascript:;">admin</a>
                     <dl class="layui-nav-child">
@@ -159,7 +159,7 @@
     </div>
     <div class="site-mobile-shade"> </div>
 </div>
-<script src="admin/layui/layui.js" charset="utf-8"></script>
+<script src="lib/layui/layui.js" charset="utf-8"></script>
 <script src="js/x-admin.js"></script>
 </body>
 </html>

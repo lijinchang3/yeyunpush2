@@ -126,13 +126,10 @@
     </div>
 
     <script src="./lib/layui/layui.js" charset="utf-8"></script>
-    <script src="./js/index.js"></script>
     <script src="./js/echarts.min.js"></script>
-    <script src="./js/echart.js"></script>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
-
         // 指定图表的配置项和数据
         var option = {
             tooltip: {

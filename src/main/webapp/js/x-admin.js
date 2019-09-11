@@ -35,15 +35,11 @@ $('.larry-side-menu').click(function() {
     			return;
     		}
     	};
-
     	res = element.tabAdd('x-tab', {
 	        title: title//用于演示
 	        ,content: '<iframe frameborder="0" src="'+url+'" class="x-iframe"></iframe>'
 		    });
-
-
 		element.tabChange('x-tab', $('.layui-tab-title li').length-1);
-
     	$('.layui-tab-title li').eq(0).find('i').remove();
   });
 });

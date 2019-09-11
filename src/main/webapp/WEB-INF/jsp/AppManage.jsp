@@ -15,9 +15,8 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title>网站后台管理模版</title>
+    <title>系统应用管理</title>
     <link rel="stylesheet" href="./plugins/layui/css/layui.css" media="all">
-
     <style>
         .x-item {
             margin-bottom: 0px;

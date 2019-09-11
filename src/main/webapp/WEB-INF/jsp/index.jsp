@@ -59,17 +59,17 @@
     <div class="layui-side layui-bg-black x-side" style="left:-200px;">
         <div class="layui-side-scroll">
             <ul class="layui-nav layui-nav-tree site-demo-nav" lay-filter="side">
-                <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon" style="top: 3px;">&#xe607;</i><cite>机构管理</cite> </a>
+                <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon" style="top: 3px;">&#xe607;</i><cite>客户信息</cite> </a>
                     <dl class="layui-nav-child">
                         <dd class="">
-                        <dd class=""> <a href="javascript:;" _href="./question-list.html"> <cite>机构列表</cite> </a> </dd>
+                        <dd class=""> <a href="javascript:;" _href="./question-list.html"> <cite>客户信息列表</cite> </a> </dd>
                         </dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon" style="top: 3px;">&#xe62d;</i><cite>产品管理</cite> </a>
+                <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon" style="top: 3px;">&#xe62d;</i><cite>危废管理</cite> </a>
                     <dl class="layui-nav-child">
                         <dd class="">
-                        <dd class=""> <a href="javascript:;" _href="./welcome.html"> <cite>产品列表（待开发）</cite> </a> </dd>
+                        <dd class=""> <a href="javascript:;" _href="./welcome.html"> <cite>危废列表</cite> </a> </dd>
                         </dd>
                         <dd class="">
                         <dd class=""> <a href="javascript:;" _href="./welcome.html"> <cite>品牌管理（待开发）</cite> </a> </dd>
@@ -136,7 +136,7 @@
                 <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon" style="top: 3px;">&#xe614;</i><cite>系统设置</cite> </a>
                     <dl class="layui-nav-child">
                         <dd class=""> <a href="javascript:;" _href="/AppManage"> <cite>系统应用管理</cite> </a> </dd>
-                        <dd class=""> <a href="javascript:;" _href="./sys-data.html"> <cite>数字字典</cite> </a> </dd>
+                        <dd class=""> <a href="javascript:;" _href="/AreaInfo"> <cite>区域管理</cite> </a> </dd>
                         <dd class=""> <a href="javascript:;" _href="./sys-shield.html"> <cite>屏蔽词</cite> </a> </dd>
                         <dd class=""> <a href="javascript:;" _href="./sys-log.html"> <cite>系统日志</cite> </a> </dd>
                         <dd class=""> <a href="javascript:;" _href="./sys-link.html"> <cite>友情链接</cite> </a> </dd>

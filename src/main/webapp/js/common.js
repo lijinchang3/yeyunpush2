@@ -156,7 +156,6 @@ function refresh() {
 	//根据传递的name值，获取子iframe窗口，执行刷新
 	if(window.frames[iframeObjName]) {
 		window.frames[iframeObjName].location.reload();
-
 	} else {
 		window.location.reload();
 	}

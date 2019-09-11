@@ -5,6 +5,7 @@ import com.github.pagehelper.PageInfo;
 import com.yeyun.yeyunpush.common.utils.R;
 import com.yeyun.yeyunpush.entity.AppManage;
 import com.yeyun.yeyunpush.entity.AreaInfo;
+import com.yeyun.yeyunpush.entity.TreeEntity;
 import com.yeyun.yeyunpush.service.AreaInfoService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,11 +36,11 @@ public class AreaInfoController {
         Example example = new Example(AreaInfo.class);
         example.createCriteria().andLessThan("arealevel", "4");
         list=areaInfoService.queryByParams(example);
-        List<treeNode> listTree=new ArrayList<>();
+        List<TreeEntity> listTree=new ArrayList<>();
         for(AreaInfo areaInfo:list)
         {
-            treeNode node=new treeNode();
-            node.id=areaInfo.getId().toString();
+            TreeEntity node=new TreeEntity();
+            node.ID=areaInfo.getId().toString();
             node.arealevel=areaInfo.getArealevel().toString();
             node.d_id=areaInfo.getCode();
             node.d_pid=areaInfo.getParentcode();
@@ -122,12 +123,3 @@ public class AreaInfoController {
     //┝-
 }
 
- class  treeNode
-{
-    public  String id;
-    public  String d_id;
-    public  String name;
-    public  String d_pid;
-    public  String arealevel;
-
-}

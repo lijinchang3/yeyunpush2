@@ -37,19 +37,22 @@
             </div>
         </div>
     </div>
-    <script type="text/html" id="toolbarDemo">
-        <div class="layui-btn-container">
-            <button class="layui-btn"  type="button" lay-event="expand">全部展开</button>
-            <button class="layui-btn"  type="button" lay-event="fold">全部折叠</button>
-            <button class="layui-btn layui-btn-normal" type="button" lay-event="add">新增</button>
-        </div>
-    </script>
-    <table id="auth-table" class="layui-table" lay-filter="auth-table"></table>
-    <script type="text/html" id="barDemo">
-        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-    </script>
+    <div class="layui-form" id="table-list" style="padding-bottom: 20px;">
+        <script type="text/html" id="toolbarDemo">
+            <div class="layui-btn-container">
+                <button class="layui-btn"  type="button" lay-event="expand">全部展开</button>
+                <button class="layui-btn"  type="button" lay-event="fold">全部折叠</button>
+                <button class="layui-btn layui-btn-normal" type="button" lay-event="add">新增</button>
+            </div>
+        </script>
+        <table id="auth-table" class="layui-table" style="padding-bottom: 5px;" lay-filter="auth-table"></table>
+        <script type="text/html" id="barDemo">
+            <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        </script>
+    </div>
 </div>
+
 <%--<script src="assets/layui/layui.js"></script>--%>
 <script src="./js/jquery.min.js"></script>
 <script src="./js/jquery.form.js"></script>
@@ -104,14 +107,10 @@
                             }
                         }, title: '类型'
                     },
-                    , {field: 'id', title: '操作', toolbar: '#barDemo'}
+                    {field: 'ID', title: '操作', toolbar: '#barDemo'}
                 ]],
                 done: function () {
-                    $('.layui-table').find('th').each(function (index,element) {
-                        if($(this).attr('data-field')>=0){
-                            $(this).find('div').css('width',$(this).width());
-                        }
-                    });
+
                     layer.closeAll('loading');
                 }
             });

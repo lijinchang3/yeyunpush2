@@ -19,7 +19,6 @@
 .layui-nav-tree .layui-nav-child a .x-menu{top: 3px;left:20px}
 .layui-nav-tree .layui-nav-child a cite{ padding: 0 0 0 30px;}
 
-
 .symbol{width:40%;padding:1.4em 0;border-radius:4px 0 0 4px;display:inline-block;text-align:center}
 .symbol i{color:#fff;font-size:3em}
 .value{width:58%;text-align:center;float:right;}
@@ -172,7 +171,8 @@ body .layui-layout-admin .footer-demo{height: auto; padding: 15px 0; line-height
 .site-zfj-anim i{-webkit-animation-name: site-zfj; animation-name: site-zfj; -webkit-animation-duration: 5s; animation-duration: 5s;  -webkit-animation-timing-function: linear; animation-timing-function: linear;}
 
 
-.site-desc{position: relative; height: 70px; margin-top: 25px;  background: url(../images/layui/desc.png) center no-repeat;}
+.site-desc{position: relative; height: 70px; margin-top: 25px; }
+/*.site-desc{position: relative; height: 70px; margin-top: 25px;  background: url(../images/layui/desc.png) center no-repeat;}*/
 .site-desc-anim{-webkit-animation-name: site-desc; animation-name: site-desc;}
 
 .site-desc cite{position: absolute; bottom: -40px; left: 0; width: 100%; color: #c2c2c2; font-style: normal;}
